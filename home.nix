@@ -19,6 +19,7 @@
 		};
 
 		git = {
+  		enable = true;
   		userName = "pac53";
   		userEmail = "dylan.krecker@protonmail.com";
 		};
