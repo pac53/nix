@@ -6,8 +6,11 @@
 		homeDirectory = "/home/dylankr53";
 		packages = with pkgs; [
   		unityhub
-  		jetbrains.rider
-  		jetbrains.clion
+		];
+		++ with jetbrains; [
+  		clion
+  		rider
+  		pycharm-professional
 		];
 	};
 
