@@ -6,12 +6,11 @@
 		homeDirectory = "/home/dylankr53";
 		packages = with pkgs; [
   		unityhub
-		];
-		++ with jetbrains; [
+		] ++ (with jetbrains; [
   		clion
   		rider
   		pycharm-professional
-		];
+		]);
 	};
 
 	programs = {
@@ -41,6 +40,9 @@
   		userEmail = "dylan.krecker@protonmail.com";
 		};
 
+		emacs = {
+  		enable = true;
+		};
 		home-manager.enable = true;
 	};	
 }
