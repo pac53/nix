@@ -10,7 +10,7 @@
         outputs = {home-manager, ...}: {
                 homeConfigurations."dylankr" = home-manager.lib.homeManagerConfiguration {
                         configuration = import ./home.nix;
-                        username = "dylan";
+                        username = "dylankr";
                         homeDirectory = "/home/dylankr";
                         system = "x86_64-linux";
                 };
