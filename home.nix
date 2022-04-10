@@ -4,8 +4,9 @@
                 neovim = {
                         enable = true;
                 };
-                gh = {
+                git = {
                         enable = true;
+                        userEmail = "dylan.krecker@protonmail.com";
                 };
         };
 }
