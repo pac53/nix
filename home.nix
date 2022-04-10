@@ -4,5 +4,8 @@
                 neovim = {
                         enable = true;
                 };
+                gh = {
+                        enable = true;
+                };
         };
 }
