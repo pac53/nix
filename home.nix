@@ -6,8 +6,8 @@
 		packages = with pkgs; [
 			mpv
 			texlive.combined.scheme-basic
-			discord
-			minecraft
+      minecraft
+      ed
 		];
 	};
 
