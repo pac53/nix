@@ -47,6 +47,7 @@
 		zsh = {
 			enable = true;
 			enableCompletion = true;
+			enableSyntaxHighlighting = true;
 			plugins = [
 				{
 					name = "pure";
