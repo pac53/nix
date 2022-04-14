@@ -17,11 +17,12 @@
                 userEmail = "dylan.krecker@protonmail.com";
         };
                 home-manager.enable = true;
+
                 neovim = {
                         enable = true;
                         extraConfig = builtins.readFile ./init.vim;
                         plugins = with pkgs.vimPlugins; [
-                                # Themes
+				# Themes
                                 vim-airline
                                 vim-airline-themes
                                 vim-colors-solarized
@@ -44,6 +45,18 @@
 
                 zsh = {
                         enable = true;
+			enableCompletion = true;
+			plugins = [
+				{
+					name = "pure";
+					src = pkgs.fetchFromGitHub {
+						owner = "sindresorhus";
+						repo = "pure";
+						rev = "v1.20.1";
+						sha256 = "sha256-iuLi0o++e0PqK81AKWfIbCV0CTIxq2Oki6U2oEYsr68=";
+					};
+				}
+			];
                 };
         };
 }

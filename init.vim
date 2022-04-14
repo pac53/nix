@@ -1,5 +1,4 @@
 set number
-set rnu
 colorscheme solarized
 lua << EOF
 require'lspconfig'.hls.setup{}
