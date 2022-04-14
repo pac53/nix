@@ -29,8 +29,7 @@
 				vim-colors-solarized
 				# Plugins for LSP
 				nvim-lspconfig
-				completion-nvim
-				nerdcommenter
+				vim-nix
 			];
 			extraPackages = with pkgs; [
 				rnix-lsp
