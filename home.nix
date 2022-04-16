@@ -6,8 +6,8 @@
 		packages = with pkgs; [
 			mpv
 			texlive.combined.scheme-basic
-      minecraft
-      ed
+			minecraft
+			ed
 		];
 	};
 
@@ -24,14 +24,14 @@
 			extraConfig = builtins.readFile ./init.vim;
 			plugins = with pkgs.vimPlugins; [
 				# Themes
-        vim-airline
-        vim-airline-themes
+				vim-airline
+				vim-airline-themes
 				vim-colors-solarized
 				# Plugins for LSP
 				nvim-lspconfig
-        vim-nix
-        # Other plugins
-        nerdtree
+				vim-nix
+				# Other plugins
+				nerdtree
 			];
 			extraPackages = with pkgs; [
 				rnix-lsp
