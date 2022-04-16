@@ -18,18 +18,20 @@
 		};
 
 		home-manager.enable = true;
-
+      
 		neovim = {
 			enable = true;
 			extraConfig = builtins.readFile ./init.vim;
 			plugins = with pkgs.vimPlugins; [
 				# Themes
-				vim-airline
-				vim-airline-themes
+        vim-airline
+        vim-airline-themes
 				vim-colors-solarized
 				# Plugins for LSP
 				nvim-lspconfig
-				vim-nix
+        vim-nix
+        # Other plugins
+        nerdtree
 			];
 			extraPackages = with pkgs; [
 				rnix-lsp
