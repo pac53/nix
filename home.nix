@@ -1,13 +1,16 @@
-{config, pkgs, ...}:    {
-	nixpkgs.config.allowUnfree = true;
+{config, pkgs, self, ...}:    {
+  nixpkgs = {
+    config.allowUnfree = true;
+  };
 
 	# Extra packages
 	home = {
 		packages = with pkgs; [
 			mpv
-			texlive.combined.scheme-basic
-			minecraft
-			ed
+      ed
+      lxappearance
+      ayu-theme-gtk
+      solarc-gtk-theme
 		];
 	};
 
@@ -20,35 +23,33 @@
 		home-manager.enable = true;
       
 		neovim = {
-			enable = true;
-			extraConfig = builtins.readFile ./init.vim;
+      enable = true;
+      extraConfig = builtins.readFile ./init.vim;
 			plugins = with pkgs.vimPlugins; [
 				# Themes
 				vim-airline
 				vim-airline-themes
-				vim-colors-solarized
-				# Plugins for LSP
-				nvim-lspconfig
-				vim-nix
+        vim-nix
+        vim-colors-solarized
+        nvim-lspconfig
 				# Other plugins
 				nerdtree
 			];
 			extraPackages = with pkgs; [
 				rnix-lsp
 				haskell-language-server
-				ccls
-				texlab
-			];
-			# Other miscillaneous settings
+        ccls
+      ];
+      # Other miscillaneous settings
 			viAlias = true;
 			withPython3 = false;
-			withRuby = false;
+      withRuby = false;
 		};
 
 		zsh = {
 			enable = true;
-			enableCompletion = true;
-			enableSyntaxHighlighting = true;
+      enableSyntaxHighlighting = true;
+      defaultKeymap = "vicmd";
 			plugins = [
 				{
 					name = "pure";
