@@ -9,7 +9,7 @@
 			mpv
       ed
       lxappearance
-      ayu-theme-gtk
+      fractal
       solarc-gtk-theme
 		];
 	};
