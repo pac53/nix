@@ -1,12 +1,12 @@
 {config, pkgs, self, ...}:    {
-	nixpkgs = {
-		config.allowUnfree = true;
-	};
 
-	# Extra packages
+	imports = [
+		./vim.nix
+		./tmux.nix
+	];
+
 	home = {
 		packages = with pkgs; [
-			mpv
 		];
 	};
 
@@ -14,10 +14,6 @@
 		git = {
 			enable = true;
 			userEmail = "dylan.krecker@protonmail.com";
-		};
-
-		emacs = {
-			enable = true;
 		};
 
 		home-manager.enable = true;

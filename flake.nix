@@ -13,10 +13,10 @@
 		in {
 			homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
 				inherit username;
-				configuration = ./home.nix;
 				system = "x86_64-linux";
 				homeDirectory = "/home/${username}";
 				stateVersion = "21.11";
+				configuration = import ./home.nix;
 			};
 		};
 }
