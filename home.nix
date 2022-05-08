@@ -3,11 +3,11 @@
 	imports = [
 		./vim.nix
                 ./tmux.nix
-		./foot.nix
 	];
 
 	home = {
 		packages = with pkgs; [
+		glibcLocales
 		];
 	};
 
