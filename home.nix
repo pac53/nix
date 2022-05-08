@@ -2,7 +2,8 @@
 
 	imports = [
 		./vim.nix
-		./tmux.nix
+                ./tmux.nix
+		./foot.nix
 	];
 
 	home = {

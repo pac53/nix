@@ -1,6 +1,8 @@
 {config, pkgs, self, ...}:    {
 
-	programs.neovim = {
+	programs = {
+		foot = {
 			enable = true;
+		};
     	};  
 }
