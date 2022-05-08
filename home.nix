@@ -1,22 +1,24 @@
 {config, pkgs, self, ...}:    {
 
 	imports = [
-		./vim.nix
-                ./tmux.nix
+		./modules/nvim/nvim.nix
+		./modules/tmux.nix
+		./modules/foot.nix
 	];
 
 	home = {
 		packages = with pkgs; [
-		glibcLocales
+			gnome-console
 		];
 	};
+
+	fonts.fontconfig.enable = true;
 
 	programs = {
 		git = {
 			enable = true;
 			userEmail = "dylan.krecker@protonmail.com";
 		};
-
 		home-manager.enable = true;
     	};  
 }

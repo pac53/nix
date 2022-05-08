@@ -7,7 +7,7 @@
 		};
 	};
 
-	outputs = { home-manager, ... }: 
+	outputs = { home-manager, ... }@inputs: 
 		let
 			username = "dylan";
 		in {
