@@ -9,7 +9,6 @@
     settings = {
       main = {
         font = "Iosevka:size=11";
-        pad = "0x0";
       };
 			
       colors = {

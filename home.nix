@@ -3,12 +3,19 @@
 	imports = [
 		./modules/nvim/nvim.nix
 		./modules/tmux.nix
-		./modules/foot.nix
+                ./modules/foot.nix
+                ./modules/emacs.nix
 	];
 
 	home = {
 		packages = with pkgs; [
-			gnome-console
+                  gnome-console
+                  zathura
+                  river
+                  sway
+                  wayfire
+                  weston
+                  wio
 		];
 	};
 

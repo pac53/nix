@@ -11,7 +11,9 @@
                 extraConfig = builtins.readFile ./init.vim;
 		plugins = with pkgs.vimPlugins; [
 		  vim-colors-solarized
-		  vim-nix
+                  vim-nix
+                  vim-airline
+                  vim-airline-themes
                 ];
                       
     	};  
